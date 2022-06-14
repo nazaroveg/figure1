@@ -29,16 +29,16 @@ protected:
 class Triangle : protected Figure
 {
 public:
-	Triangle(int side)
+	Triangle()
 	{
-		
+	Figure::sides_count = 3;
 	}
 	
 	
 	
-	void sides_count(int n)
+	void sides_count()
 	{
-		std::cout << "Треугольник: " << n << std::endl;
+		std::cout << "Треугольник: " << Figure::sides_count << std::endl;
 	}
 
 	
@@ -49,15 +49,15 @@ public:
 class Quadrangle : protected Figure
 {
 public:
-	Quadrangle(int side)
+	Quadrangle()
 	{
-
+		Figure::sides_count = 4;
 	}
 	
-	void sides_count(int n)
+	void sides_count()
 	{
 		
-		std::cout << "Четырёхугольник: " << n << std::endl;
+		std::cout << "Четырёхугольник: " << Figure::sides_count << std::endl;
 	}
 	
 
@@ -69,13 +69,13 @@ int main()
 {
 	setlocale(LC_ALL, "RUS");
 	Figure fi ;
-	Triangle tr{0};
-	Quadrangle qu{0};
+	Triangle tr{};
+	Quadrangle qu{};
 	std::cout << "Количество сторон: " << std::endl;
 
 	fi.get_sides_count();
-	tr.sides_count(3);
-	qu.sides_count(4);
+	tr.sides_count();
+	qu.sides_count();
 	
 	
 	
