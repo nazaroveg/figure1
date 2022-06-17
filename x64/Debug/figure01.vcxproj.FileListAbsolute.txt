@@ -1,1 +1,2 @@
 C:\Users\newya\source\repos\figure01\x64\Debug\figure01.exe
+C:\Users\newya\source\repos\figure1\x64\Debug\figure01.exe
