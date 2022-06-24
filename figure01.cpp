@@ -20,37 +20,25 @@ public:
 	
 private:
 	
-
-
 protected:
 	int sides_count = 0;
 	std::string name = { "Фигура" };
-
 };
 
 
 
-class Triangle : protected Figure
+class Triangle : public Figure
 {
-public:
-	
+public:	
 	Triangle()
 	{
 	sides_count = 3;
 	name = "Треугольник";	 
 	}
-	int get_sides_count() const
-	{
-		return sides_count;
-	}
-	std::string get_name() const
-	{
-		return name;
-	}
 };
 
 
-class Quadrangle : protected Figure
+class Quadrangle : public Figure
 {
 public:
 	Quadrangle()
@@ -58,14 +46,7 @@ public:
 	sides_count = 4;
 	name = "Четырёхугольник";
 	}
-	int get_sides_count() const
-	{
-		return sides_count;
-	}
-	std::string get_name() const
-	{
-		return name;
-	}
+	
 };
 
 
@@ -82,10 +63,5 @@ int main()
 	std::cout << tr.get_name() << ": " << tr.get_sides_count() << "\n";
 	std::cout << qu.get_name() << ": " << qu.get_sides_count() << "\n";
 	
-	
-	
-	
-	
-
 }
 
