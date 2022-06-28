@@ -7,7 +7,7 @@
 class Figure
 {
 public:
-	Figure(){}
+	Figure(int _sides_count = 0, std::string _name = "Фигура") : sides_count(_sides_count), name(_name) {}
 	
 	int get_sides_count() const
 	{
@@ -22,7 +22,7 @@ private:
 	
 protected:
 	int sides_count = 0;
-	std::string name = { "Фигура" };
+	std::string name = {  };
 };
 
 
@@ -30,23 +30,16 @@ protected:
 class Triangle : public Figure
 {
 public:	
-	Triangle()
-	{
-	sides_count = 3;
-	name = "Треугольник";	 
-	}
+	Triangle() : Figure(3, "Треугольник") { }
+	
 };
 
 
 class Quadrangle : public Figure
 {
 public:
-	Quadrangle()
-	{
-	sides_count = 4;
-	name = "Четырёхугольник";
-	}
-	
+	Quadrangle() : Figure (4, "Четырёхугольник" ) { }
+
 };
 
 
